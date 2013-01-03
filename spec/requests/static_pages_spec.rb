@@ -11,8 +11,17 @@ describe "Static pages" do
     end
   	 it "should have the title 'Home'" do
      visit '/static_pages/home'
-	page.should have_selector('title', :text => "Gunnar's Sample App | Home")
+	page.should have_selector('title', :text => "Gunnar's Sample App")
 	end
+
+
+	it "should not have a custom page title" do
+     visit '/static_pages/home'
+	page.should_not have_selector('title', :text => '| Home')
+	end
+
+
+
 end
 
   describe "Help page" do
@@ -24,7 +33,7 @@ end
     end
   	 it "should have the title 'Home'" do
      visit '/static_pages/help'
-	page.should have_selector('title', :text => "Gunnar's Sample App | Help")
+	page.should have_selector('title', :text => "Gunnar's Sample App")
 	end
 end
  describe "About page" do
@@ -36,7 +45,7 @@ end
     end
   	 it "should have the title 'About Us'" do
      visit '/static_pages/about'
-	page.should have_selector('title', :text => "Gunnar's Sample App | About")
+	page.should have_selector('title', :text => "Gunnar's Sample App")
 	end
 end
 end
