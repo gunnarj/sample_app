@@ -1,4 +1,4 @@
 <% provide(:title, 'Help') %>
 <h1>Help</h1>
-
+<title> Gunnar's Sample App | <%= yield(:title) %></title>
 <p>Do you need help?</p>

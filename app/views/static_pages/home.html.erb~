@@ -1,5 +1,5 @@
 <% provide(:title, 'Home') %>
 
 <h1>Sample App</h1>
-
+<title> Gunnar's Sample App | <%= yield(:title) %></title>
 <p>This is the home page for the sample app</p>
